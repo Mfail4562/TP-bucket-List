@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    About us | {{ parent() }}
+{% endblock %}
+
+{% block body %}
+    <section class="team-members">
+        {% for member in teamMembers %}
+            <article>
+            <img src="{{ member.picture }}" alt="picture of {{ member.lastname }}">
+            <div>
+                <h3> {{ member.firstname }} {{ member.lastname }}
+                    {% if member.firstname == 'Fabien' %}
+                        &hearts;
+                    {% endif %}
+                </h3>
+                <p> birth the {{ member.dateOfBirth | date('j-m-Y') }}</p>
+                <p>He is the creator of {{ member.creatorOf }}</p>
+                <span class="description">description :</span><br>
+                <p>{{ member.description }}</p>
+            </div>
+        {% else %}
+            <h3>Oh, I think they are at the coffee machine </h3>
+            </article>
+        {% endfor %}
+    </section>
+
+{% endblock %}
+
