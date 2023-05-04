@@ -92,6 +92,19 @@ main {
     background-color: #fff1e6;
 }
 
+main a {
+    color: #8c6956;
+}
+
+.wishes-list article {
+    margin-bottom: 0.5rem;
+}
+
+.wish-credit {
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
 footer {
     padding: 2rem 0;
     text-align: center;
