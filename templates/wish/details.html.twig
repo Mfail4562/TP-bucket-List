@@ -7,7 +7,7 @@
 {% block body %}
     <h2>{{ wish.title }}</h2>
 
-    <p class="wish-credit">Created by {{ wish.author }} on {{ wish.dateCreated|date('Y-m-d') }}</p>
+    <p class="wish-credit">Created by "{{ wish.author }}" on {{ wish.dateCreated|date('Y-m-d') }}</p>
 
     <p>{{ wish.description|nl2br }}</p>
 {% endblock %}

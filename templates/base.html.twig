@@ -20,7 +20,7 @@
         {% endblock %}
 
         {% block javascripts %}
-           
+
         {% endblock %}
     </head>
     <body>
@@ -35,8 +35,17 @@
                 {% include 'inc/nav.html.twig' %}
             </div>
         </header>
+
         {# contenu principal de chaque page #}
         <main>
+            {# Lecture des flash #}
+            {% for label, messages in app.flashes %}
+                {% for message in messages %}
+                    <div class="flash flash-{{ label }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endfor %}
             <div class="container">
                 {% block body %}{% endblock %}
             </div>

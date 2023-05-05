@@ -110,3 +110,33 @@ footer {
     text-align: center;
     background-color: #eddcd2;
 }
+
+label {
+    display: block;
+}
+
+
+input,
+textarea {
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+    width: 50%;
+}
+
+button {
+    padding: 0.5rem 0.7rem;
+    font-family: inherit;
+}
+
+.flash {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.flash-success {
+    background-color: #a2a232;
+}
