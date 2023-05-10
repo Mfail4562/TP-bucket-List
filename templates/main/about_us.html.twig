@@ -8,8 +8,8 @@
     <section class="team-members">
         {% for member in teamMembers %}
             <article>
-            <img src="{{ member.picture }}" alt="picture of {{ member.lastname }}">
             <div>
+                <img src="{{ member.picture }}" alt="picture of {{ member.lastname }}">
                 <h3> {{ member.firstname }} {{ member.lastname }}
                     {% if member.firstname == 'Fabien' %}
                         &hearts;
