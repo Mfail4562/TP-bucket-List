@@ -4,6 +4,7 @@
 
     use App\Entity\Category;
     use App\Entity\Wish;
+    use Doctrine\ORM\EntityRepository;
     use Symfony\Bridge\Doctrine\Form\Type\EntityType;
     use Symfony\Component\Form\AbstractType;
     use Symfony\Component\Form\Extension\Core\Type\TextareaType;
@@ -30,7 +31,10 @@
                     'class' => Category::class,
                     'choice_label' => 'name',
                     'label' => 'Category',
-                    'placeholder' => '--Choose a category--'
+                    'placeholder' => '--Choose a category--',
+                    'query_builder' => function (EntityRepository $entityRepository) {
+                        return $entityRepository->createQueryBuilder('c')->orderBy('c.id', 'ASC');
+                    }
                 ]);
         }
 
