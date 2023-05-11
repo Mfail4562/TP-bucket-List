@@ -27,13 +27,14 @@
         {# entête du site #}
         <header>
             <div class="container">
-                <h1 class="header-logo">
-                    <a href="{{ path('main_home') }}" title="Go back to homepage">
-                        <img src="{{ asset('img/logo.svg') }}" alt="Bucket-List Logo">Bucket-List
-                    </a>
-                </h1>
-                {% include 'inc/nav.html.twig' %}
-            </div>
+                <div class="header-top">
+                    <h1 class="header-logo">
+                        <a href="{{ path('main_home') }}" title="Go back to homepage">
+                            <img src="{{ asset('img/logo.svg') }}" alt="Bucket-List Logo">Bucket-List
+                        </a>
+                    </h1>
+                    {% include 'inc/nav.html.twig' %}
+                </div>
         </header>
 
         {# contenu principal de chaque page #}

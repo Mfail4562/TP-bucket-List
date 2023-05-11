@@ -74,6 +74,7 @@ header nav a:hover {
 .header-logo {
     font-size: 3rem;
     font-weight: normal;
+
 }
 
 .header-logo img {
@@ -141,4 +142,18 @@ button {
 
 .flash-success {
     background-color: #a2a232;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-nav a {
+    margin-left: 1rem;
+}
+
+header h1 {
+    margin: 0 0 10px 0;
+    flex: 1;
 }

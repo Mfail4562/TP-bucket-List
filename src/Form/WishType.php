@@ -25,7 +25,8 @@
                     'label' => 'Please describe it!'
                 ])
                 ->add('author', TextType::class, [
-                    'label' => 'Your username'
+                    'label' => 'Your username',
+
                 ])
                 ->add('category', EntityType::class, [
                     'class' => Category::class,

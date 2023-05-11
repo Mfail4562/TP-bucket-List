@@ -46,7 +46,11 @@
         {
 
             $wish = new Wish();
+
+            $currentUserPseudo = $this->getUser()->getUserIdentifier();
+
             $wish
+                ->setAuthor($currentUserPseudo)
                 ->setIsPublished(false)
                 ->setDateCreated(new DateTime());
             $wishForm = $this->createForm(WishType::class, $wish);
